@@ -14,7 +14,7 @@ func (d String) Len() int {
 
 //测试Get方法
 func TestGet(t *testing.T) {
-	lru := New(int64(0), nil)
+	lru := New(int64(0), nil)		//初始化一个Cache
 	lru.Add("key1", String("1234"))		//加入一个键值对
 	if v, ok := lru.Get("key1"); !ok || string(v.(String)) != "1234" {		//判断键值不存在或者value值不正确则匹配失败
 		t.Fatalf("cache hit key1=1234 failed")
