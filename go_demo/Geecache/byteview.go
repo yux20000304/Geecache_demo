@@ -1,4 +1,4 @@
-package geecache
+package Geecache
 
 //建立一个数据结构表示缓存值，注意这里只实现了读操作
 type ByteView struct {
